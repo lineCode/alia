@@ -1,7 +1,7 @@
-#ifndef ALIA_UTILITIES_HPP
-#define ALIA_UTILITIES_HPP
+#ifndef ALIA_FLOW_UTILITIES_HPP
+#define ALIA_FLOW_UTILITIES_HPP
 
-#include <alia/context.hpp>
+#include <alia/components/context.hpp>
 #include <alia/flow/data_graph.hpp>
 
 namespace alia {
@@ -10,7 +10,7 @@ namespace alia {
 // and returns a reference to that copy. (It will move instead of copying when
 // possible.)
 template<class T>
-T*
+T&
 make_returnable_ref(context ctx, T x)
 {
     T* storage;
